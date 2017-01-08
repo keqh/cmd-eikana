@@ -175,6 +175,7 @@ class KeyEvent: NSObject {
     func keyUp(_ event: CGEvent) -> Unmanaged<CGEvent>? {
         self.keyCode = nil
         
+        //self.keyCode = nil
         if hasConvertedEvent(event) {
             if let event = getConvertedEvent(event) {
                 return Unmanaged.passUnretained(event)
